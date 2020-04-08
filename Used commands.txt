@@ -1,28 +1,72 @@
-# Clones the repository
+------------------------------------------------------
+Линк до репо
+------------------------------------------------------
+https://github.com/Milena-K/SI_lab1_gr2_186085
+
+
+------------------------------------------------------
+git log
+------------------------------------------------------
+
+Author: milena.kukolj <mkukolj@protonmail.com>
+Date:   Wed Apr 8 16:43:43 2020 +0200
+
+    student class finished
+
+commit 476b0a051980cc70fd696c156a4b656a6b3453d1
+Author: milena.kukolj <mkukolj@protonmail.com>
+Date:   Wed Apr 8 12:50:41 2020 +0200
+
+    grades list added
+
+commit afa2551a643d62f85067527a62cb567b3af94bf8
+Author: milena.kukolj <mkukolj@protonmail.com>
+Date:   Wed Apr 8 11:27:10 2020 +0200
+
+    students.csv file added
+
+commit 40de0827110ed1dec5c9160b39a26c2f9dc08727
+Author: Stefan Andonov <stefan5andonov@yahoo.com>
+Date:   Thu Mar 12 17:39:55 2020 +0100
+
+    error fixed:
+
+commit 3254e737497f122c0d27a2a89423d30d6be77015
+Author: Stefan Andonov <stefan5andonov@yahoo.com>
+Date:   Thu Mar 12 17:38:04 2020 +0100
+
+    initial commit
+
+
+------------------------------------------------------
+Команди
+------------------------------------------------------
+
+# Клонира репо
 git clone https://github.com/finkiSI/SI_lab1_gr2.git 	
 
-# Renames local repository
+# Го заменува името на локалниот репозиториум
 mv .\SI_lab1_gr2\ .\SI_lab1_gr2_186085
 
-# Removes remote origin
+# Го брише remote репозиториумот
 git remote remove origin 
 
-# Sets new remote origin to my newly created repo
-git remote set-url origin https://github.com/Milena-K/SI_lab1_gr2_186085.git
+# Креира remote repo на github
+git remote set-url origin https://github.com/Milena-K/SI_lab1_gr2_186085.git 
 
-# 
-git push -u origin master 
-
-# Synchronizes the branch
+# Го синхронизира remote репозиториумот
 git pull
 
---- making changes to students.csv file ---
+--- edit students.csv file ---
 
-# 
+# Додава нови или променети фајлови на индексот
 git add .
 
-# Commiting changes to branch and adding a message
+# Ги запишува промените на репото
 git commit -m "students.csv file added"
+
+# Го синхронизира remote репозиториумот со локалниот 
+git push
 
 --- edit Student.java ---
 
@@ -38,17 +82,20 @@ git push
 
 --- Create a new branch ---
 
-# Creates the branch on my local machine and switches in this branch
+#  Се креира и се преминува на нова гранка 
 git checkout -b facultyFeature
 
-# Push the branch on github
+# Го синхронизира локалниот со remote репозиториумот
 git push origin facultyFeature
 
-# If you wish to set tracking information for this branch you can do so with:
-git branch --set-upstream-to=origin/facultyFeature facultyFeature
+--- edit students.csv ---
 
-# Specify which branch you want to merge with
-git pull origin facultyFeature
+git add .
+git commit -m "faculty class finished"
+git push
 
+# Се префрламе во master гранката
+git checkout master
 
-
+# Спој ја гранката facultyFeature со master
+git merge facultyFeature
