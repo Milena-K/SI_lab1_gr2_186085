@@ -26,16 +26,29 @@ git commit -m "students.csv file added"
 
 --- edit Student.java ---
 
-# 
 git add .
-
-# Commiting changes to branch and adding a message
 git commit -m "grades list added"
-
-# 
 git push
 
+--- edit Student.java ---
 
+git commit -m "student class finished" 
+git add .
+git push
+
+--- Create a new branch ---
+
+# Creates the branch on my local machine and switches in this branch
+git checkout -b facultyFeature
+
+# Push the branch on github
+git push origin facultyFeature
+
+# If you wish to set tracking information for this branch you can do so with:
+git branch --set-upstream-to=origin/facultyFeature facultyFeature
+
+# Specify which branch you want to merge with
+git pull origin facultyFeature
 
 
 
