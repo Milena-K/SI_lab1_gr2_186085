@@ -1,0 +1,41 @@
+# Clones the repository
+git clone https://github.com/finkiSI/SI_lab1_gr2.git 	
+
+# Renames local repository
+mv .\SI_lab1_gr2\ .\SI_lab1_gr2_186085
+
+# Removes remote origin
+git remote remove origin 
+
+# Sets new remote origin to my newly created repo
+git remote set-url origin https://github.com/Milena-K/SI_lab1_gr2_186085.git
+
+# 
+git push -u origin master 
+
+# Synchronizes the branch
+git pull
+
+--- making changes to students.csv file ---
+
+# 
+git add .
+
+# Commiting changes to branch and adding a message
+git commit -m "students.csv file added"
+
+--- edit Student.java ---
+
+# 
+git add .
+
+# Commiting changes to branch and adding a message
+git commit -m "grades list added"
+
+# 
+git push
+
+
+
+
+
